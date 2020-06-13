@@ -1,0 +1,55 @@
+html{
+    font-family: "century gothic", arial, helvetica, sans-serif;
+    color: #003031;
+    background-color: #e7e7ef;
+}
+
+.layout-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.bar{
+    height: 100px;
+    width: 100%;
+    background-color: #ce0000;
+}
+
+.content-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.item{
+    flex: 1 1 0;
+    padding: 30px;
+    max-width: 500px;
+}
+
+.logo{
+    text-align: right;
+    border-right: 1px solid #003031;
+}
+
+/* Small screens */
+@media all and (max-width: 700px) {
+    .content-container{
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    
+    .logo{
+        text-align: center;
+        border-right-style: none;
+    }
+    
+    .item{
+        padding: 10px;
+        flex: 0 0 0;
+    }
+}
